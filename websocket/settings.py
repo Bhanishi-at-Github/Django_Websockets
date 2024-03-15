@@ -71,6 +71,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'websocket.wsgi.application'
+ASGI_APPLICATION = 'websocket.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
+}
 
 
 # Database
